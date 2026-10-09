@@ -1,0 +1,13 @@
+#pendo-base,
+#pendo-guide-container,
+#pendo-backdrop,
+#pendo-resource-center-container,
+[id^="pendo-"],
+[class^="_pendo-"],
+[class*=" _pendo-"],
+[class*="pendo-guide"],
+[class*="pendo-badge"] {
+  display: none !important;
+  visibility: hidden !important;
+  pointer-events: none !important;
+}

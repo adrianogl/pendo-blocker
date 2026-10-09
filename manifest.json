@@ -1,0 +1,30 @@
+{
+  "manifest_version": 3,
+  "name": "Pendo Blocker",
+  "version": "1.1.0",
+  "description": "Bloqueia o carregamento do Pendo e esconde banners, guias e tooltips.",
+  "permissions": ["declarativeNetRequest", "scripting", "storage"],
+  "host_permissions": ["<all_urls>"],
+  "icons": {
+    "16": "icons/on-16.png",
+    "32": "icons/on-32.png",
+    "48": "icons/on-48.png",
+    "128": "icons/on-128.png"
+  },
+  "action": {
+    "default_title": "Pendo Blocker: ligado",
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icons/on-16.png",
+      "32": "icons/on-32.png"
+    }
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "declarative_net_request": {
+    "rule_resources": [
+      { "id": "pendo_rules", "enabled": true, "path": "rules.json" }
+    ]
+  }
+}
